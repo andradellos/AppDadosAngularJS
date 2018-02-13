@@ -1,0 +1,13 @@
+﻿<div>
+  <h3>{{tituloLista}}</h3> 
+
+    <ui-select ng-model="emploiee.selected" theme="bootstrap"  on-select="onSelectCallback($item)">
+        <ui-select-match placeholder="Nome">{{$select.selected.nome}} </ui-select-match>
+        <ui-select-choices repeat="e in emploiees | filter: $select.search">{{e.nome}}</ui-select-choices>
+    </ui-select>
+  
+    <!--{{emploiee.selected}}-->
+
+    <h4><a ng-href="#!resultado/{{emploiee.selected.nome}}">Resultados</a></h4>
+    <!--<h4><a ng-href="#!resultado">Resultados</a></h4>-->
+</div>
